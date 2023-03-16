@@ -1,0 +1,27 @@
+server.port: 9097
+
+spring:
+  datasource:
+    username: root
+    password: primesoft
+    url: jdbc:mysql://localhost:3306/his
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  
+
+  application:
+     name: AR-API
+  
+eureka:
+ client:
+   serviceUrl:
+     defaultZone: http://localhost:8761/eureka
+management:
+ endpoints:
+   web:
+     exposure:
+       include: '*'
